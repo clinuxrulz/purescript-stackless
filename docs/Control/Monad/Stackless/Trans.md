@@ -22,6 +22,7 @@ MonadTrans StacklessT
 (MonadWriter w m, MonadRec m) => MonadWriter w (StacklessT m)
 (MonadState s m) => MonadState s (StacklessT m)
 (MonadRWS r w s m, MonadRec m) => MonadRWS r w s (StacklessT m)
+(MonadEff e m) => MonadEff e (StacklessT m)
 ```
 
 #### `runStacklessT`

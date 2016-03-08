@@ -7,6 +7,7 @@ import Prelude ( Unit, unit, ($), (<<<), class Functor, class Apply
                , class Applicative, class Bind, class Monad, bind, return
                , (<$>), (>>=)
                )
+import Control.Monad.Eff.Class (class MonadEff, liftEff)
 import Control.Monad.Error.Class (class MonadError, catchError, throwError)
 import Control.Monad.Reader.Class (class MonadReader, ask, local)
 import Control.Monad.Writer.Class (class MonadWriter, pass, listen, writer)
@@ -95,3 +96,6 @@ instance monadStateStacklessT :: (MonadState s m) => MonadState s (StacklessT m)
   state f = lift $ state f
 
 instance monadRWSStacklessT :: (MonadRWS r w s m, MonadRec m) => MonadRWS r w s (StacklessT m)
+
+instance monadEffStacklessT :: (MonadEff e m) => MonadEff e (StacklessT m) where
+  liftEff m = lift $ liftEff m
