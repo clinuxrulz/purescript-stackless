@@ -4,6 +4,10 @@
   "moduleType": [
     "node"
   ],
+  "repository": {                                                          
+    "type": "git",                                                         
+    "url": "https://github.com/clinuxrulz/purescript-stackless.git"            
+  },
   "ignore": [
     "**/.*",
     "node_modules",
