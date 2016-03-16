@@ -8,7 +8,7 @@ So you can write code without using ```tailRecM``` and still avoid Stack Overflo
 
 For ```StacklessT``` the base monad must be an instance of ```MonadRec``` when unboxing it.
 
-**Example** *(Taken from real code)*:
+**Example**: *(Taken from real code)*
 In this example ```for_``` from ```purescript-foldable-traversable``` is made stack-safe by wrapping the computation
 in a ```StacklessT```.
 ```

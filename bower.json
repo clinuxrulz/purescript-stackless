@@ -1,12 +1,12 @@
 {
   "name": "purescript-stackless",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "moduleType": [
     "node"
   ],
-  "repository": {                                                          
-    "type": "git",                                                         
-    "url": "https://github.com/clinuxrulz/purescript-stackless.git"            
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clinuxrulz/purescript-stackless.git"
   },
   "ignore": [
     "**/.*",
