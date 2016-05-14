@@ -1,6 +1,7 @@
 {
   "name": "purescript-stackless",
   "version": "0.0.3",
+  "license": "MIT",
   "moduleType": [
     "node"
   ],
